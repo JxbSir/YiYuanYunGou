@@ -1,0 +1,1 @@
+../../../SCLAlertView-Objective-C/SCLAlertView/UIImage+ImageEffects.h

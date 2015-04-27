@@ -1,0 +1,141 @@
+//
+//  one-prefix.pch
+//  OneYuan
+//
+//  Created by Peter Jin (https://github.com/JxbSir) on  15/2/18.
+//  Copyright (c) 2015年 PeterJin.   Email:i@jxb.name      All rights reserved.
+//
+
+#import "Constants.h"
+
+#import "XBBaseVC.h"
+#import "UIColor+hexColor.h"
+#import "UIView+StringTag.h"
+#import "NSString+Size.h"
+#import "UITableViewCell+SeparatorLine.h"
+#import "UIImage+RenderedImage.h"
+#import "UIImageView+NoMapMode.h"
+#import "UIAlertView+Blocks.h"
+#import "XBApi.h"
+#import "XBGlobal.h"
+#import "XBParser.h"
+#import "XBToastManager.h"
+#import "Jxb_Common_Common.h"
+#import "XBDbHandler.h"
+
+#import "OneBaseVC.h"
+#import "OneBaseParser.h"
+#import "OyTool.h"
+
+#import "LoginVC.h"
+
+#import "TouchJSON/NSDictionary_JSONExtensions.h"
+#import "Jastor.h"
+#import "SVPullToRefreshView+OY_PullRefreshView.h"
+#import "UIImageView+WebCache.h"
+#import "LMDropdownView.h"
+#import "BTBadgeView.h"
+#import "AFNetworkReachabilityManager.h"
+#import <SCLAlertView.h>
+#import "ASPopUpView.h"
+#import "ASProgressPopUpView.h"
+#import "TCBlobDownload.h"
+#import "ZipArchive.h"
+#import "PDKeychainBindings.h"
+
+#import "MobClick.h"
+#import "UMFeedback.h"
+
+#define kDidNotifyFromBack      @"kDidNotifyFromBack"
+#define kDidNotifyReloadNewest  @"kDidNotifyReloadNewest"
+#define kLoginUsername          @"kLoginUsername"
+#define kNoMapMode              @"kNoMapMode"
+#define kDidLoginOk             @"kDidLoginOk"
+#define kDidAddCart             @"kDidAddCart"
+#define kDidAddCartOpt          @"kDidAddCartOpt"
+#define kDidAddCartSearch       @"kDidAddCartSearch"
+#define kDidShowNewPro          @"kDidShowNewPro"
+#define kDidNotifyApns          @"kDidNotifyApns"
+#define kDidReloadUser          @"kdidReloadUser"
+#define kDidShowCart            @"kDidShowCart"
+#define kSaveLibVersion         @"kSaveLibVersion"
+#define kOYCommonUser           @"kOYCommonUser"
+
+
+//因数据涉及版权问题，故这里不做公开，请自行对（一元云购）抓包获取，谢谢
+//home
+#define oyImageBaseUrl      @"http://www.xxx.com/GoodsPic/Pic-200-200/"
+#define oyImageBigUrl       @"http://www.xxx.com/userpost/big/"
+#define oyHeadBaseUrl       @"http://www.xxx.com/UserFace/"
+#define oyBaseUrl           @"http://www.xxx.com"
+#define oyLoginUrl          @"http://www.xxx.com/JPData?action=userlogin&name=%@&pwd=%@"
+#define oyLoginOK           @"http://www.xxx.com/JPData?action=loginok"
+#define oyGetUserInfo       @"http://www.xxx.com/JPData?action=getUInfo"
+#define oyGetCartNum        @"http://www.xxx.com/JPData?action=cartnum"
+
+#define oyAdTop             @"http://www.xxx.com/android/index?action=getADListForPage&sortID=13"
+#define oyAdSearch1         @"http://www.xxx.com/android/index?action=getADListForPage&sortID=21"
+#define oyAdSearch2         @"http://www.xxx.com/android/index?action=getADListForPage&sortID=22"
+#define oyNewest            @"http://www.xxx.com/android/index?action=getStartRaffleGoodsList&quantity=2147483647"
+#define oyOrderShow         @"http://www.xxx.com/JPData?action=getPostPageList&FIdx=0&EIdx=3&isCount=1&order=10"
+#define oyHomePage          @"http://www.xxx.com/android/index?action=getHomePage"  //已揭晓、人气推荐、晒单分享
+
+//product
+#define oyGoodsUrl          @"http://www.xxx.com/android/goods?brandID=0&sortID=%d&FIdx=%d&EIdx=%d&orderFlag=%d&isCount=1&action=getGoodsPageList"
+#define oyGoodsDetail       @"http://www.xxx.com/android/goods?goodsID=%d&action=getGoodsDetailPageData"
+#define oyGoodsByCodeId     @"http://www.xxx.com/android/goods?goodsID=0&action=getGoodsPeriodList&codeID=%d"
+#define oyGoodsLottery      @"http://www.xxx.com/android/lottery?action=getRaffleBaseInfo&codeID=%d"
+#define oyGoodsBuyList      @"http://www.xxx.com/android/goods?sortType=1&action=getUserBuyListByBarcode&codeID=%d&FIdx=%d&EIdx=%d&isCount=1"
+
+//newest
+#define oyNewestedPage      @"http://www.xxx.com/android/lottery?action=getBarcodeRaffleList&sortID=%d&EIdx=%d&isCount=1&FIdx=%d"
+
+//user
+#define oyMineUserUrl       @"http://www.xxx.com/member/index.do"
+#define oyMineBuyList       @"http://www.xxx.com/JPData?action=getUserBuyList&FIdx=%d&EIdx=%d&isCount=1&state=%d"
+#define oyMineOrderList     @"http://www.xxx.com/JPData?action=getUserOrderList&FIdx=%d&EIdx=%d&isCount=1"
+#define oyMineShowOrderList @"http://www.xxx.com/JPData?action=getUserPostList&FIdx=%d&EIdx=%d&isCount=1"
+#define oyMineMoneyUrl      @"http://www.xxx.com/member/consumption.do"
+#define oyMineMoneyOut      @"http://www.xxx.com/JPData?action=getUserConsumption&FIdx=%d&EIdx=%d&isCount=1"
+#define oyMineMoneyIn       @"http://www.xxx.com/JPData?action=getUserRecharge&FIdx=%d&EIdx=%d&isCount=1"
+
+//cart
+#define oyCartStateUrl      @"http://www.xxx.com/products/%d.html"
+#define oyCartDetail        @"http://www.xxx.com/mycart/index.do"
+#define oyCartDelUrl        @"http://www.xxx.com/JPData?action=delCartItem&codeID=%d"
+#define oyCartAddUrl        @"http://www.xxx.com/JPData?action=addShopCart&shopNum=%d&codeID=%d"
+#define oyCartPostPay       @"http://www.xxx.com/JPData/API.ashx/JPData?action=UserPay&integral=0&device=1"
+#define oyCartPayResult     @"http://www.xxx.com/JPData/API.ashx?action=getshopresult&t=0&id=%@"
+#define oyCartPayRefer      @"http://www.xxx.com/mycart/payment.do"
+
+//search
+#define oySearchUrl         @"http://www.xxx.com/android/index?action=getSearchList&EIdx=100&orderFlag=1&isCount=1&FIdx=1&key=%@"
+
+//show
+#define oyShowListUrl       @"http://www.xxx.com/android/post?action=getPostSinglePageList&order=10&isCount=1&FIdx=%d&EIdx=%d"
+#define oyShowGoodsList     @"http://www.xxx.com/android/post?action=getPageForGoodsPostSingle&goodsID=%d&isCount=1&FIdx=%d&EIdx=%d"
+#define oyShowGoodsDetail   @"http://www.xxx.com/android/post?postID=%d&action=getPostSingleDetail"
+#define oyShowReplyUrl      @"http://www.xxx.com/android/post?postID=59580&action=getPostReplyGetByID&EIdx=6&isCount=1&FIdx=1"
+
+//getproduct step
+#define oyTransUrl          @"http://www.xxx.com/member/orderdetail-%d.do"
+#define oyComfirmOrder      @"http://www.xxx.com/JPData?action=confirmAddr&oid=%d&cid=%d"
+#define oyComfirmShip       @"http://www.xxx.com/JPData?action=confirmShiped&oid=%d"
+
+//reg
+#define oyRegPhoneSms       @"http://www.xxx.com/android/Register?action=sendSMS&mobile=%@"
+#define oyRegPhoneCode      @"https://www.xxx.com/JPData?action=mobileregsn&mobile=%@&sn=%@"
+#define oyRegRefer          @"http://www.xxx.com/passport/mobilecheck.html?mobile=%@"
+#define oyRegSetPwd         @"https://www.xxx.com/JPData?action=mobileregsiter&str=%@&pwd=%@"
+#define oyRegSetPwdRefer    @"http://www.xxx.com/passport/mobilesave.html?str=%@"
+#define oyRegOkUrl          @"http://www.xxx.com/JPData?action=mobileok"
+
+//address
+#define oyAddressUrl        @"http://www.xxx.com/JPData?action=getMemberContactList"
+#define oyAddressRefer      @"http://www.xxx.com/Address.do"
+#define oyAddressDel        @"http://www.xxx.com/JPData?action=deleteMemberContact&contactID=%d"
+#define oyAddreasAddUrl     @"http://www.xxx.com/JPData"
+
+//area
+#define oyAreaGetUrl        @"http://www.xxx.com/JPData?action=getAreaChildNodes&areaID=%d"
+#define oyAreaDefaultUrl    @"http://www.xxx.com/JPData?action=setMemberContactDefault&contactID=%d"

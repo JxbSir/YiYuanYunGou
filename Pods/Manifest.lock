@@ -1,0 +1,81 @@
+PODS:
+  - AFNetworking (2.5.1):
+    - AFNetworking/NSURLConnection (= 2.5.1)
+    - AFNetworking/NSURLSession (= 2.5.1)
+    - AFNetworking/Reachability (= 2.5.1)
+    - AFNetworking/Security (= 2.5.1)
+    - AFNetworking/Serialization (= 2.5.1)
+    - AFNetworking/UIKit (= 2.5.1)
+  - AFNetworking/NSURLConnection (2.5.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.1)
+  - AFNetworking/Security (2.5.1)
+  - AFNetworking/Serialization (2.5.1)
+  - AFNetworking/UIKit (2.5.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - BTBadgeView (1.2)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - IPDashedLineView (1.1.0)
+  - jastor (0.2.1)
+  - LMDropdownView (1.0.0)
+  - MBProgressHUD (0.9)
+  - PDKeychainBindingsController (0.0.1)
+  - RESideMenu (4.0.7)
+  - SCLAlertView-Objective-C (0.5.5)
+  - SDWebImage (3.7.1):
+    - SDWebImage/Core (= 3.7.1)
+  - SDWebImage/Core (3.7.1)
+  - Surfboard (1.0.0)
+  - SVPullToRefresh (0.4.1)
+  - TCBlobDownload (2.1.1)
+  - TouchJSON (1.1)
+  - ZipArchive (1.4.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - BTBadgeView
+  - FMDB
+  - IPDashedLineView
+  - jastor
+  - LMDropdownView
+  - MBProgressHUD
+  - PDKeychainBindingsController (~> 0.0.1)
+  - RESideMenu
+  - SCLAlertView-Objective-C
+  - SDWebImage
+  - Surfboard
+  - SVPullToRefresh
+  - TCBlobDownload
+  - TouchJSON
+  - ZipArchive (~> 1.4.0)
+
+SPEC CHECKSUMS:
+  AFNetworking: 10e85a00bb0f475124e4ff2677bf15693b2c1523
+  BTBadgeView: 9d9988b9bb6997c31b0ffd4c45a26afd129e3b98
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  IPDashedLineView: 4121e77a8b3f4dc8dec50e0a153524c4e1803b21
+  jastor: fe9ff71f4b683698253d6a0d9a2561987fd9aff3
+  LMDropdownView: 1c3c389bf542a54ff8a3d6f1eb92a534c5712b60
+  MBProgressHUD: d8e7ea388dc1549a42e0d219067cf5f2c898fb66
+  PDKeychainBindingsController: fa8cb3cf99f2ea9240d61066ed0549f34e2cec3c
+  RESideMenu: f24c508404b49c667344c54aba7e590883533958
+  SCLAlertView-Objective-C: b543c72ce654609a46e8bff3dff59906b5487980
+  SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
+  Surfboard: 66a2f25c2460eace935491dbba90c148e902981b
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+  TCBlobDownload: 8726f054cc00bb5f66a57bb0c99764842dfa5c9f
+  TouchJSON: 39be3595ebe489095311d97ce0c824417324cb74
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
+
+COCOAPODS: 0.35.0
