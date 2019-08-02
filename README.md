@@ -7,24 +7,24 @@
 
 因版权问题，本次开源将不提供一元云购的官方接口地址，地址都将以www.xxx.com替换，如果看官需要正常运行，请自行抓包获得，见谅。
 
-######1.本App使用MVC框架完成开发。
-######2.使用CocoaPods引入各大第三方组件：
-######pod 'AFNetworking'
-######pod 'MBProgressHUD'
-######pod 'SVPullToRefresh'
-######pod 'SDWebImage'
-######pod 'Surfboard'
-######pod 'IPDashedLineView'
-######pod 'RESideMenu'
-######pod 'jastor'
-######pod 'TouchJSON'
-######pod 'LMDropdownView'
-######pod 'FMDB'
-######pod 'BTBadgeView'
-######pod 'SCLAlertView-Objective-C'
-######pod 'TCBlobDownload'
-######pod 'ZipArchive', '~> 1.4.0'
-######pod 'PDKeychainBindingsController', '~> 0.0.1'
+###### 1.本App使用MVC框架完成开发。
+###### 2.使用CocoaPods引入各大第三方组件：
+###### pod 'AFNetworking'
+###### pod 'MBProgressHUD'
+###### pod 'SVPullToRefresh'
+###### pod 'SDWebImage'
+###### pod 'Surfboard'
+###### pod 'IPDashedLineView'
+###### pod 'RESideMenu'
+###### pod 'jastor'
+###### pod 'TouchJSON'
+###### pod 'LMDropdownView'
+###### pod 'FMDB'
+###### pod 'BTBadgeView'
+###### pod 'SCLAlertView-Objective-C'
+###### pod 'TCBlobDownload'
+###### pod 'ZipArchive', '~> 1.4.0'
+###### pod 'PDKeychainBindingsController', '~> 0.0.1'
 
 
 ##部分App界面
